@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
-    --cor-de-fundo: #1E1E1E;
-    --verde: #6FFF57;
+    --cor-de-fundo: #F6F2FF;
+    --roxo-pastel: #C8A2FF;
+    --roxo-medio: #B38DFF;
     --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58, 55, 94, 0.5);
-    --texto-fundo: rgba(58, 55, 94, 0.3);
+    --botao-ativo: #D9C2FF;
+    --botao-inativo: rgba(217, 194, 255, 0.5);
+    --texto-fundo: rgba(200, 162, 255, 0.2);
+    --texto-escuro: #4B3B63;
 }
 
 body {
     background-color: var(--cor-de-fundo);
-    color: var(--branco);
+    color: var(--texto-escuro);
     font-family: 'Chakra Petch', sans-serif;
 }
-
 
 .conteudo-principal {
     display: flex;
@@ -33,14 +34,13 @@ body {
 }
 
 .titulo-principal span {
-    color: var(--verde);
+    color: var(--roxo-pastel);
 }
-
 
 .botao {
     font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
-    color: var(--branco);
+    color: var(--texto-escuro);
     display: flex;
     justify-content: center;
     padding: 1em;
@@ -51,6 +51,12 @@ body {
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--roxo-pastel);
+    color: var(--branco);
 }
 
 .botao:first-child {
@@ -63,13 +69,15 @@ body {
 
 .botao.ativo {
     background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
+    border-bottom: 4px solid var(--roxo-medio);
+    color: var(--texto-escuro);
 }
 
 .abas-textos {
     background-color: var(--texto-fundo);
     padding: 40px;
     border-radius: 0 0 40px 40px;
+    backdrop-filter: blur(6px);
 }
 
 .aba-conteudo.ativo {
@@ -87,7 +95,7 @@ body {
 
 .aba-conteudo-titulo-secundario {
     text-align: center;
-    color: var(--verde);
+    color: var(--roxo-medio);
     text-transform: uppercase;
 }
 
@@ -106,14 +114,13 @@ body {
 .contador-digito-numero {
     font-size: 80px;
     margin: 0;
-
+    color: var(--roxo-medio);
 }
 
 .contador-digito-texto {
-    color: var(--verde);
+    color: var(--roxo-pastel);
     font-size: 20px;
     margin: 0;
-
 }
 
 @media screen and (min-width: 768px) {
